@@ -10,7 +10,7 @@
 		?>
 		<!-- Google tag (gtag.js) -->
 		<?php	require_once("./php/googletag.php"); ?>
-
+		
 		<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
 		<script type="text/javascript" src="./banner.js"></script>
 	</head>
@@ -191,21 +191,22 @@
 										if (($loteria == 'SUPER SETE') || ($loteria == 'SUPER-SETE')) { $corFundo = '#a8cf45';} 
 										
 										$bs64_evento = 'data:image/jpg;base64,'.$ev['value'][$i]['imagem'];
-										$imgLoteria  = 'data:image/jpg;base64,'.$ev['value'][$i]['bolao']['loteria']['imagem'];
-		
-										if(!is_dir($caminho))
+										$imgLoteria  = 'data:image/png;base64,'.$ev['value'][$i]['bolao']['loteria']['imagem'];
+
+										if(!is_dir($caminho)){
 											mkdir($caminho, 777);
+										}
 
 										$img = converter_base64_para_imagem($bs64_evento, $caminho, $nomeImagem);
 										$imgLot = converter_base64_para_imagem($imgLoteria, 'img/', $nomeImgLoteria);
 										
 										if ($i == 0) {
 											echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
-											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.jpg"></div>';
+											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.png"></div>';
 										} else if ($loteria != $ev['value'][$i - 1]['bolao']['loteria']['nomeDescricao'] ) {
 											echo '</div>';
 											echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
-											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.jpg"></div>';
+											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.png"></div>';
 										}
 										if ($promocao == 'TRUE'){
 											$bolaoPromocao  = 'data:image/jpg;base64,'.$ev['value'][$i]['bolao']['imagem'];
