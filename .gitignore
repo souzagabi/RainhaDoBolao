@@ -1,4 +1,9 @@
 admin/
 img/
+v2/
 js/noscriptgoogle.js
 php/googletag.php
+banner*
+jquery*
+get_*
+login*

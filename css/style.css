@@ -47,17 +47,26 @@ header#top-menu #top-bar .logo img {
 .banner {
     margin-top: 10%;
 }
+#banner_geral a img {
+        height: 50px;
+        width: 50px;
+    }
+#banner_mobile, #msgHorario{
+    display: none;
+}
 .carousel-caption {
-    padding: 35px;
+    padding: 5px;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: -15px;
     background-color: rgb(0 0 0 / 46%);
 }
+.carousel-caption p {
+    margin: 5px 0 5px;
+}
+
 ol.carousel-indicators {
-    display: block;
-    left: auto;
-    bottom: 50px;
-    right: 15px;
+    bottom: -15px;
 }
 .carousel-indicators li {
     height: 5px;
@@ -88,13 +97,15 @@ ol.carousel-indicators {
 .leading-page {
     padding: 10px;
     border-radius: 10px;
+    background-color: #930089;
+    justify-content: center;
 }
 .leading-page img {
     width: 100%;
     border-radius: 10px;
 }
 .conetudo {
-    margin-top: -200px;
+    margin-top: 0px;
 }
 .conetudo .col-md-4 {
     padding: 15px;
@@ -158,8 +169,35 @@ footer .links {
     color: #ffffff;
 }
 @media only screen and (max-device-width: 700px) {
-    .banner{
+    #banner_geral{
         display: none;
+        margin-top: 25%;
+    }
+    #banner_mobile{
+        margin-top: 40%;
+        display: block;
+    }
+    #banner_geral #carousel-inner img{
+        height: 800px;
+    }
+    #banner_geral a img,
+    #banner_mobile a img {
+        height: 25px;
+        width: 25px;
+    }
+    #banner_geral ol,
+    #banner_mobile ol {
+        display: none;
+    }
+    #msgHorario {
+        display: block;
+    }
+    .carousel-caption p {
+        font-size: 12px;
+    }
+    section .carousel-caption {
+        position: inherit;
+        margin: 5px 10px;
     }
     .conetudo {
         margin-top: 50px;
@@ -171,12 +209,17 @@ footer .links {
         display: block;
     }
     .cards .container .column-geral {
-        padding: 10px;
-        border: 2px solid #ffffff;
-        border-radius: 10px;
         margin: 5px 0px;
     }
     h4, h5 {
         font-size: 0.8em;
+    }
+    .leading-page, .conetudo .col-md-4 {
+        padding: 2px;
+        margin: 0px;
+    }
+    .img-leading {
+        padding: 2px;
+        margin: 1px;
     }
 }

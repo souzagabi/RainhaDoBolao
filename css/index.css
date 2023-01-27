@@ -36,7 +36,7 @@ body{
     box-shadow: 0 -10px 30px #f49f00;
     margin-top: -5px;
 }
-.cards .container .column-geral{
+.cards .container .column-geral, .promocao{
     padding: 10px;
     border: 2px solid #ffffff;
     border-radius: 10px;
