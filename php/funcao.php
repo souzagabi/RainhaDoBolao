@@ -56,5 +56,20 @@
         return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$string);
     }
 
+    function eliminateFiles($caminho){
+        //=========================== Início do bloco para excluir os arquivdo da pasta bolão ====================\\
+        if(is_dir($caminho)){
+            $types = array( 'png', 'jpg', 'jpeg');
+            if ( $handle = opendir($caminho) ) {
+                while ( $entry = readdir( $handle ) ) {
+                    $ext = strtolower( pathinfo( $entry, PATHINFO_EXTENSION) );
+                    if( in_array( $ext, $types ) ){
+                        unlink($caminho.$entry);
+                    } 
+                }
+            }
+        }
+        //============================= Fim do bloco para excluir os arquivdo da pasta bolão ====================\\
+    }
     
 ?>
