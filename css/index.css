@@ -7,14 +7,7 @@ body{
 .foto{
     float: right;
 }
-.pr{
-    font-weight: bold;
-    font-size: 24px;
-    margin: 10px 0;
-}
-.pr, .fa{
-    color: #00f40c;
-}
+
 .game {
     margin: 10px 0;
 }
@@ -59,26 +52,3 @@ body{
 a{
     text-decoration: none;
 }
-
-/*========================== Modal ==============================*/
-.input-modal {
-    margin: 5px 0;
-}
-.modal-content {
-    padding: 10px;
-    border-radius: 1em;
-    background-color: #54aa38;
-}
-.modal-header {
-    margin-bottom: 10px;
-    border-radius: 1em;
-    background-color: #ffffff;
-}
-form {
-    border-radius: 1em;
-    background-color: #ffffff;
-}
-.aviso {
-    background-color: #ebc681;
-}
-/*========================== Modal ==============================*/

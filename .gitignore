@@ -1,6 +1,8 @@
 admin/
+fonts/
 img/
 v2/
+css/font*
 js/noscriptgoogle.js
 php/googletag.php
 banner*

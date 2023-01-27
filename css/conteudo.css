@@ -1,0 +1,72 @@
+.historia, .historia-footer {
+    color: #ffffff;
+    font-family: "Roboto", San-Serif 20px bold;
+}
+.historia img, .historia-footer img {
+    width: 100%;
+    height: 100%px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.historia-footer {
+    display: none;
+}
+.leading-page {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #930089;
+    justify-content: center;
+}
+.leading-page img {
+    width: 100%;
+    border-radius: 10px;
+}
+.conetudo {
+    margin-top: 0px;
+}
+.conetudo .col-md-4 {
+    padding: 15px;
+    color: #ffffff;
+}
+.conetudo a  {
+    padding: 5px 20px;
+    align-items: center;
+    background-color: #15c158;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+    background-image: none;
+    box-shadow: 0 0 10px 0rgba(0,0,0,.3);
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #fff;
+    display: inline-flex;
+    position: relative;
+    border: none;
+}
+/*  ============================ Início Animação do botão de compra ============================*/
+.conetudo a:before {
+    border: #15c158 solid 5px;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.conetudo a:hover,
+.conetudo a:focus {
+    animation: botao 1.75s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+.conetudo a:active {
+    transform: translateY(2px);
+    animation: none;
+}
+@keyframes botao {
+    to {
+        opacity: 2;
+		transform: scale(1.2,1.2);
+	}
+}
+/*  ============================ Fim Animação do botão de compra ============================*/

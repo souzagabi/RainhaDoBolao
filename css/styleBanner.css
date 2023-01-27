@@ -1,3 +1,41 @@
+.banner {
+    margin-top: 10%;
+}
+#banner_geral a img {
+        height: 50px;
+        width: 50px;
+												  
+    }
+#banner_mobile, #msgHorario{
+    display: none;
+}
+.banner-caption {
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(0 0 0 / 46%);
+}
+.banner-caption p {
+    margin: 5px 0 5px;
+}
+
+ol.carousel-indicators {
+    bottom: -15px;
+}
+.carousel-indicators li {
+    height: 5px;
+    background-color: #ffeb3b;
+    opacity: .6;
+}
+.informacao {
+    z-index: 4;
+    color: #ffffff;
+    font-size: 20px;
+    margin: -100px 0px 100px 200px;
+    position: relative;
+}
+
 #carouselExampleCaptions,
 #carouselExampleCaptions-mobile {
 	position: relative;

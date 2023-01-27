@@ -2,15 +2,15 @@
 body {
     background: linear-gradient(45deg, #47ad2b, #1c4611,#bde6b2, #1c4611,#47ad2b);
 }
-header .navbar-custom,.card {
-    background: linear-gradient(-45deg, #47ad2b, #1c4611,#bde6b2, #1c4611,#47ad2b,#bde6b2,#47ad2b,#1c4611,#bde6b2,#1c4611,#47ad2b) no-repeat;
+#top .navbar-light,.card, #top .bg-light {
+    background: linear-gradient(-45deg, #47ad2b, #388824,#bde6b2,#bde6b2, #388824,#47ad2b);
 }
 
-body,header .navbar-custom,.card{
+body,#top .navbar-light,.card, #top .bg-light{
     animation: gradient 10s ease alternate infinite;
     background-size: 300% 300%;
 }
-header#top-menu #top-bar-img{
+#top #top-bar-img{
     animation: gradient 10s ease alternate infinite;
 }
 @keyframes gradient {
@@ -22,7 +22,7 @@ header#top-menu #top-bar-img{
 	}
 }
 
-header#top-menu #top-bar .logo img {
+#top #top-bar .logo img {
     animation: fly 5s linear infinite alternate ;
     animation-delay: 1s;
 }

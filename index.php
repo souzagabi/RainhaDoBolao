@@ -2,28 +2,46 @@
 
 <html lang="pt-BR">
 
-  <head>
+	<head>
+		<?php
+			require_once('./partsIndex/header.html');
+			require_once('./partsIndex/js.html');
+			require_once('./partsIndex/css.html');
+		?>
+		<!-- Google tag (gtag.js) -->
+		<?php	require_once("./php/googletag.php"); ?>
 
-    <!-- Google tag (gtag.js) -->
-	<?php	require_once("./php/googletag.php");	?>
+		<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="./banner.js"></script>
+	</head>
+  	<body>
+      	<!-- Google Tag Manager (noscript) -->
+		<?php	require_once("./js/noscriptgoogle.js");	?>
+		<!-- End Google Tag Manager (noscript) -->
 
-    <?php require_once('partsIndex/header.html'); ?>
-	<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
-	<script type="text/javascript" src="./banner.js"></script>
+	<section id="top">
+		<?php 
+			require_once('partsIndex/top.html');
+			require_once('php/funcao.php');
+			$url = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOConcurso?$expand=bolao/loteria&$filter=stAtivo%20eq%20true&$expand=imagem&$expand=bolao/imagem&$expand=bolao/loteria/imagem&$orderby=bolao/loteria/ordemlandingpage&$orderby=concursoEspecial%20desc';
 
-  </head>
-  
-  <body>
+			$eventos = json_decode(file_get_contents($url));
+			$ev = converterStrClassParaArray($eventos);
+			
+			$urlEmpresa = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOEmpresa';
+			
+			$empresa = json_decode(file_get_contents($urlEmpresa));
+			$evEmpesa = converterStrClassParaArray($empresa);
+			
+			$telefoneAtendimento = $evEmpesa['value'][0]['telefoneAtendimento'];
 
-    <!-- Google Tag Manager (noscript) -->
-
-	<?php require_once("./js/noscriptgoogle.js");	?>
-	<!-- End Google Tag Manager (noscript) -->
-
+			$caminho = 'img/bolao/' ;
+		?>
+	</section>
 	<!-- Incício da sessão do banner-->
     <section class="section-top-banner">
 		<div class="top-banner">
-			<?php require_once('partsIndex/top.html'); ?>
+			
 			<!-- Banner Section -->
 			<div class="banner">
 				<section class="container"  id="banner_geral">
@@ -38,12 +56,10 @@
 							<img src="./img/imgFixa/SETA_DIREITA.png" alt="Seta para mudar imagem para direita" srcset="">
 							<span class="visually-hidden">Next</span>
 						</a>
-						<div class="carousel-caption d-none d-md-block">
-							<p>Horário de atendimento de segunda a sábado das 10:00 às 18:00.</p>
-						</div>
 					</div>
 				</section>
 			</div>
+			
 			<div class="banner-mobile">
 				<section class="container"  id="banner_mobile">
 					<div id="carouselExampleCaptions-mobile" class="carousel slide" data-bs-ride="carousel">
@@ -64,29 +80,18 @@
 		</div>
     </section>
 	<section id="msgHorario">
-		<div class="carousel-caption d-md-block">
+		<div class="banner-caption d-md-block">
+			<p>Horário de atendimento de segunda a sábado das 10:00 às 18:00.</p>
+		</div>
+	</section>
+	<section class="bannermsg container">
+		<div class="banner-caption d-md-block">
 			<p>Horário de atendimento de segunda a sábado das 10:00 às 18:00.</p>
 		</div>
 	</section>
 	<!-- Fim da sessão do banner-->
 	<!-- Início da sessão de conteúdo-->
-	<?php
-		require_once('php/funcao.php');
-        $url = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOConcurso?$expand=bolao/loteria&$filter=stAtivo%20eq%20true&$expand=imagem&$expand=bolao/imagem&$expand=bolao/loteria/imagem&$orderby=bolao/loteria/ordemlandingpage&$orderby=concursoEspecial%20desc';
-
-		$eventos = json_decode(file_get_contents($url));
-		$ev = converterStrClassParaArray($eventos);
-		
-		$urlEmpresa = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOEmpresa';
-		
-        $empresa = json_decode(file_get_contents($urlEmpresa));
-        $evEmpesa = converterStrClassParaArray($empresa);
-		
-		$telefoneAtendimento = $evEmpesa['value'][0]['telefoneAtendimento'];
-
-		$caminho = 'img/bolao/' ;
-    
-    ?>
+	
 	<section class="container conetudo">
 		<section class="historia">
 			<div class="row">

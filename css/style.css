@@ -1,3 +1,5 @@
+
+/*============================= Body =====================================*/
 body {
     background-color: transparent;
 }
@@ -5,7 +7,10 @@ h4, h5 {
     font-size: 0.8em;
     text-align: left;
 }
-header#top-menu {
+
+/*============================= Body =====================================*/
+/*============================= Top ======================================*/
+#top{
     width: 100vw;
     position: fixed;
     top: 0;
@@ -13,11 +18,7 @@ header#top-menu {
     z-index: 100;
 }
 
-header img {
-    margin-left: 10px;
-    transform: rotate(-10deg);
-}
-header#top-menu #top-bar .row {
+#top .row {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -25,156 +26,107 @@ header#top-menu #top-bar .row {
     position: relative;
 }
 
-header#top-menu #top-bar .logo img {
+#top .logo img {
     display: flex;
-    height: 120%;
+    height: 110%;
     object-fit: cover;
     object-position: center;
     position: absolute;
     opacity: 1;
-    margin-top: -35px;
+    margin-top: -25px;
+	margin-left: 10px;				  
+	transform: rotate(-10deg);						  
 }
 .navbar {
-    height: 80px;
+    padding: 20px;
+    font-size: 20px;
 }
+.me-auto {
+    border-radius: 10px;
+    justify-content: center;
+}
+.container-fluid ul{
+    margin-left: 10%;
+}                                    
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .divisoria {
+    color: #ffffff;
+    font-size: 30px;
+}
+#top .bg-light{
+    background-color: #388824;
+}
+/*#top #top-bar .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}*/
+
 .navbar-collapse {
     margin-left: 150px;
 }
-.nav-link {
+				   
+/*============================= Top ======================================*/
+/*============================= Banner ===================================*/
+/*Arquivo styleBanner.css*/
+/*============================= Banner ===================================*/
+/*============================= Container ================================*/
+/*Arquivo conteudo.css*/
+.container{
+    margin-top: 10px;
+}
+/*============================= Container ================================*/
+/*============================= Sobre Nós ================================*/
+.sobre, .faq{
     color: #ffffff;
 }
-/******************** Banner **************************/
-.banner {
-    margin-top: 10%;
-}
-#banner_geral a img {
-        height: 50px;
-        width: 50px;
-    }
-#banner_mobile, #msgHorario{
-    display: none;
-}
-.carousel-caption {
-    padding: 5px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: -15px;
-    background-color: rgb(0 0 0 / 46%);
-}
-.carousel-caption p {
-    margin: 5px 0 5px;
-}
-
-ol.carousel-indicators {
-    bottom: -15px;
-}
-.carousel-indicators li {
-    height: 5px;
-    background-color: #ffeb3b;
-    opacity: .6;
-}
-.informacao {
-    z-index: 4;
-    color: #ffffff;
-    font-size: 20px;
-    margin: -100px 0px 100px 200px;
-    position: relative;
-}
-/******************** Container **************************/
-.historia, .historia-footer {
-    color: #ffffff;
-    font-family: "Roboto", San-Serif 20px bold;
-}
-.historia img, .historia-footer img {
-    width: 100%;
-    height: 100%px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-.historia-footer {
-    display: none;
-}
-.leading-page {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #930089;
-    justify-content: center;
-}
-.leading-page img {
-    width: 100%;
-    border-radius: 10px;
-}
-.conetudo {
-    margin-top: 0px;
-}
-.conetudo .col-md-4 {
-    padding: 15px;
-    color: #ffffff;
-}
-.conetudo a  {
-    padding: 5px 20px;
-    align-items: center;
-    background-color: #15c158;
-    border-radius: 10px 10px 10px 10px;
-    cursor: pointer;
-    background-image: none;
-    box-shadow: 0 0 10px 0rgba(0,0,0,.3);
-    font-size: 20px;
-    text-transform: uppercase;
-    line-height: 1.5em;
-    color: #fff;
-    display: inline-flex;
-    position: relative;
-    border: none;
-}
-/*  ============================ Início Animação do botão de compra ============================*/
-.conetudo a:before {
-    border: #15c158 solid 5px;
-    border-radius: 10px 10px 10px 10px;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-.conetudo a:hover,
-.conetudo a:focus {
-    animation: botao 1.75s cubic-bezier(0.33, 1, 0.68, 1) infinite;
-}
-.conetudo a:active {
-    transform: translateY(2px);
-    animation: none;
-}
-
-
-@keyframes botao {
-    to {
-        opacity: 2;
-		transform: scale(1.2,1.2);
-	}
-}
-
-/*  ============================ Fim Animação do botão de compra ============================*/
-
-/******************** Footer **************************/
+/*============================= Sobre Nós ================================*/
+/*============================== Footer ===================================*/
 footer a {
     text-decoration: none;
 }
 footer .links {
     margin-top: 20px;
 }
-/************************** Sobre **************************************/
-.sobre, .faq{
-    color: #ffffff;
+footer #redesSociais a,
+footer #redesSociais i {
+    color: #6c757d!important;
 }
+footer #redesSociais i {
+    font-size: 18px;
+}
+/*============================== Footer ===================================*/
 @media only screen and (max-device-width: 700px) {
-    #banner_geral{
+    #banner_geral,.bannermsg,
+    .navbar-light .navbar-nav .divisoria,
+    .redeSociais {
         display: none;
-        margin-top: 25%;
     }
+    .navbar-light .navbar-toggler {
+        color: rgba(204, 204, 204, 0.55);
+        border-color: rgba(255, 255, 255, 0.658);
+        border: 2px solid;
+    }
+    .navbar-light .navbar-toggler-icon {
+        color: rgba(204, 204, 204, 0.55);
+        stroke: rgba(204, 204, 204, 0.55);
+    }
+    #top .logo img {
+        height: 60px;
+        margin-left: -10px;
+    }
+    .navbar-collapse {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    
     #banner_mobile{
-        margin-top: 40%;
+        margin-top: 25%;
         display: block;
     }
     #banner_geral #carousel-inner img{
@@ -192,10 +144,10 @@ footer .links {
     #msgHorario {
         display: block;
     }
-    .carousel-caption p {
+    .banner-caption p {
         font-size: 12px;
     }
-    section .carousel-caption {
+    section .banner-caption {
         position: inherit;
         margin: 5px 10px;
     }
@@ -222,4 +174,4 @@ footer .links {
         padding: 2px;
         margin: 1px;
     }
-}
+}					
