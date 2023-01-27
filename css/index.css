@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+body{
+    font-family: "Roboto", San-Serif;
+    background-color: #203d1f;
+}
+.foto{
+    float: right;
+}
+.pr{
+    font-weight: bold;
+    font-size: 24px;
+    margin: 10px 0;
+}
+.pr, .fa{
+    color: #00f40c;
+}
+.game {
+    margin: 10px 0;
+}
+.text-center {
+    padding: 15px;
+}
+.cards, .eventoCartaz {
+    width: 90%;
+    color: #fff;
+    display: block;
+    background-color: #eeea;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 23px #05160742;
+    transition: 0.3s;
+    background-color: #3d5a3e;
+}
+.cards:hover, .eventoCartaz:hover {
+    box-shadow: 0 8px 30px #31f400;
+}
+.eventoCartaz{
+    padding: 20px 0;
+}
+.cards .container .column{
+    padding: 10px;
+    border-radius: 10px;
+}
+.cards .container .columnX{
+    margin-top: 80px;
+    font-size: 3em;
+    color: #00f40c;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}

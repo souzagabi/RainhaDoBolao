@@ -1,0 +1,27 @@
+/*==================== card0 =======================*/
+
+.container .card0 .card{
+     background-image: linear-gradient(-10deg, #318835, #fff, #318835);;
+     border-radius: 20px;
+     box-shadow: 0 2px 23px #05160742;
+     transition: 0.3s;
+}
+.container .card0 .card:hover{
+    box-shadow: 0 8px 30px #05160742;
+    margin-top: -5px;
+}
+.cartaz .card0 .card .card-body,.container .card0 .card .card-body {
+    padding: 0px !important;
+}
+.cards .container .card .mediaCard{
+    background: url("../img/RainhaBolaoLogo2.png") center/cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+}
+.container .card0 .card img{
+    border-radius: 20px;
+}
+.cartaz, .cartaz img, .container .card0, .container .card0 .card{
+    border-radius: 20px;
+}

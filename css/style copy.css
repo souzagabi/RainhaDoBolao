@@ -1,0 +1,99 @@
+body {
+    background-color: transparent;
+    background-image: linear-gradient(65deg,#4ba931 25%,#31721f 60%);
+}
+header#top-menu {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all .2s ease-in-out;
+}
+/*  ============================Animação do background do topo ============================*/
+header#top-menu #top-bar {
+    animation: gradient 5s ease alternate infinite;
+    background: linear-gradient(-45deg, #47ad2b, #1c4611, #47ad2b) no-repeat;
+    background-size: 300% 300%;
+}
+@keyframes gradient {
+	from {
+		background-position: 0 50%;
+	}
+	to {
+		background-position: 100% 50%;
+	}
+}
+
+/*  ============================Animação do background do topo ============================*/
+header img {
+    margin-left: 10px;
+}
+header#top-menu #top-bar .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header#top-menu #top-bar .row figure{
+    width:200px;
+    height:98px;
+    margin: 5px 0px;
+}
+header#top-menu #top-bar .row figure img {
+    display: flex;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    opacity: 1;
+    transition: opacity .5s linear;
+    transition: all .2s ease-in-out;
+}
+
+/******************** Banner **************************/
+.banner {
+    margin-top: 10%;
+}
+.carousel-caption {
+    background-color: rgb(0 0 0 / 46%);
+    text-align: left;
+    padding: 25px;
+    border-radius: 10px;
+}
+ol.carousel-indicators {
+    display: block;
+    left: auto;
+    bottom: 50px;
+    right: 15px;
+}
+.carousel-indicators li {
+    height: 5px;
+    background-color: #ffeb3b;
+    opacity: .6;
+}
+/******************** Container **************************/
+.conetudo {
+    margin-top: -200px;
+}
+.conetudo .col-md-4 {
+    padding: 15px;
+    color: #ffffff;
+}
+.conetudo a  {
+    padding: 10px 30px;
+    background-color: #15c158;
+    background-image: none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 0 0 10px 0rgba(0,0,0,.3);
+    font-size: 20px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    color: #fff;
+    text-decoration: none;
+}
+/******************** Footer **************************/
+footer a {
+    text-decoration: none;
+}
