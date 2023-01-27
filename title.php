@@ -4,5 +4,5 @@
 </div>
 <div class="column col-sm-2"></div>
 <div class="column col-sm-5">
-    <h5><i class="fa fa-dollar-sign"></i> Valor: 160.000.000,00</h5>
+    <h5><i class="fa fa-video"></i> Valor: 160.000.000,00</h5>
 </div>

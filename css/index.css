@@ -15,12 +15,6 @@ body{
 .pr, .fa{
     color: #00f40c;
 }
-.game {
-    margin: 10px 0;
-}
-.text-center {
-    padding: 15px;
-}
 .cards, .eventoCartaz {
     width: 90%;
     color: #fff;
@@ -40,7 +34,6 @@ body{
 }
 .cards .container .column{
     padding: 10px;
-    border-radius: 10px;
 }
 .cards .container .columnX{
     margin-top: 80px;

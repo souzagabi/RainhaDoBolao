@@ -9,9 +9,9 @@ header#top-menu {
     left: 0;
     z-index: 100;
 }
-header#top-menu #top-bar-img {
-    animation: gradient 10s ease alternate infinite;
-	background: url("../img/backgroundtop.png") no-repeat;
+header#top-menu #top-bar {
+    /*background-color: #47ad2b;
+	background: url("../img/backgroundtop.png");*/
 }
 /*  ============================Animação do background do topo ============================*/
 header#top-menu #top-bar {
@@ -50,7 +50,6 @@ header#top-menu #top-bar .row figure img {
 }
 
 /*  ============================Animação do background do topo ============================*/
-
 header img {
     margin-left: 10px;
     transform: rotate(-10deg);
