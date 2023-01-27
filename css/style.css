@@ -2,6 +2,10 @@ body {
     background-color: transparent;
     background-image: linear-gradient(65deg,#4ba931 25%,#31721f 60%);
 }
+h4, h5 {
+    font-size: 0.8em;
+    text-align: left;
+}
 header#top-menu {
     width: 100vw;
     position: fixed;
@@ -9,11 +13,11 @@ header#top-menu {
     left: 0;
     z-index: 100;
 }
-header#top-menu #top-bar {
-    /*background-color: #47ad2b;
-	background: url("../img/backgroundtop.png");*/
+header#top-menu #top-bar-img {
+    animation: gradient 10s ease alternate infinite;
+	background: url("../img/backgroundtop.png") no-repeat;
 }
-/*  ============================Animação do background do topo ============================*/
+/*  ============================ Início Animação do background do topo ============================*/
 header#top-menu #top-bar {
     animation: gradient 10s ease alternate infinite;
     background: linear-gradient(-45deg, #47ad2b, #1c4611,#bde6b2, #1c4611,#47ad2b,#bde6b2,#47ad2b,#1c4611,#bde6b2,#1c4611,#47ad2b) no-repeat;
@@ -28,10 +32,6 @@ header#top-menu #top-bar {
 	}
 }
 header#top-menu #top-bar .row figure img {
-    /*animation-name: fly;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;*/
     animation: fly 5s linear infinite alternate ;
     animation-delay: 1s;
 }
@@ -40,16 +40,10 @@ header#top-menu #top-bar .row figure img {
     0% {
 		transform: translate(0,10px) rotate(10deg) scale(1.1);
 	}
-	/*5% {
-		transform: translate(2%,2px) rotate(-10deg) scale(0.5);
-	}
-	
-	/*100% {
-		transform: translate(calc(98vw - 200px),0) rotate(-10deg);
-	}*/
 }
 
-/*  ============================Animação do background do topo ============================*/
+/*  ============================ Fim Animação do background do topo ============================*/
+
 header img {
     margin-left: 10px;
     transform: rotate(-10deg);
@@ -105,18 +99,76 @@ ol.carousel-indicators {
     color: #ffffff;
 }
 .conetudo a  {
-    padding: 10px 30px;
+    padding: 5px 20px;
+    align-items: center;
     background-color: #15c158;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
     background-image: none;
-    border-radius: 8px 8px 8px 8px;
     box-shadow: 0 0 10px 0rgba(0,0,0,.3);
     font-size: 20px;
     text-transform: uppercase;
     line-height: 1.5em;
     color: #fff;
-    text-decoration: none;
+    display: inline-flex;
+    position: relative;
+    border: none;
 }
+/*  ============================ Início Animação do botão de compra ============================*/
+.conetudo a:before {
+    border: #15c158 solid 5px;
+    border-radius: 10px 10px 10px 10px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.conetudo a:hover,
+.conetudo a:focus {
+    animation: botao 1.75s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+.conetudo a:active {
+    transform: translateY(2px);
+    animation: none;
+}
+
+
+@keyframes botao {
+    to {
+        opacity: 2;
+		transform: scale(1.2,1.2);
+	}
+}
+
+/*  ============================ Fim Animação do botão de compra ============================*/
+
 /******************** Footer **************************/
 footer a {
     text-decoration: none;
+}
+
+@media only screen and (max-device-width: 700px) {
+    header#top-menu #top-bar .row figure{
+        height:35px;
+    }
+    header#top-menu #top-bar-img {
+        background: url("../img/backgroundtopmobile.png") no-repeat;
+    }
+    .banner{
+        display: none;
+    }
+    .conetudo {
+        margin-top: 50px;
+    }
+    .cards .container .column-geral {
+        padding: 10px;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        margin: 5px 0px;
+    }
+    h4, h5 {
+        font-size: 0.8em;
+    }
 }

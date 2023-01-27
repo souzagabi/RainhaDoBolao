@@ -15,10 +15,13 @@ body{
 .pr, .fa{
     color: #00f40c;
 }
-.cards, .eventoCartaz {
-    width: 90%;
+.game {
+    margin: 10px 0;
+}
+.cards {
     color: #fff;
     display: block;
+    padding: 10px;
     background-color: #eeea;
     margin: auto;
     border-radius: 20px;
@@ -26,22 +29,21 @@ body{
     transition: 0.3s;
     background-color: #3d5a3e;
 }
-.cards:hover, .eventoCartaz:hover {
+.cards:hover {
     box-shadow: 0 8px 30px #31f400;
 }
-.eventoCartaz{
-    padding: 20px 0;
+.cards .container .column-geral:hover {
+    box-shadow: 0 -10px 30px #f49f00;
+    margin-top: -5px;
 }
-.cards .container .column{
+.cards .container .column-geral{
     padding: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
 }
-.cards .container .columnX{
-    margin-top: 80px;
-    font-size: 3em;
-    color: #00f40c;
-    font-weight: bold;
-}
-
 a{
     text-decoration: none;
+}
+.input-modal {
+    margin: 5px 0;
 }
