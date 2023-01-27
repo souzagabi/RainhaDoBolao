@@ -4,19 +4,20 @@
 
   <head>
 
-      <!-- Google Tag Manager -->
+      <!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XHPWWBF0L"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  		gtag('config', 'G-9XHPWWBF0L');
+	</script>
 
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-
-})(window,document,'script','dataLayer','GTM-KGBJWHR');</script>
-
-<!-- End Google Tag Manager -->
+	<!-- Event snippet for Website traffic conversion page -->
+	<script>
+  		gtag('event', 'conversion', {'send_to': 'AW-972803889/XJMJCMrpioAYELGe788D'});
+	</script>
 
     <?php require_once('partsIndex/header.html'); ?>
   </head>
@@ -48,19 +49,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<div class="carousel-item active">
 							<img src="./img/BannerRainhaBolao.png" alt="FIXO" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
-								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
+								<p>Horário de atendimento de segunda a sábado das 9:00 às 17:00.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<img src="https://www.markuptag.com/images/slider-img-2.jpg" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
-								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
+								<p>Horário de atendimento de segunda a sábado das 9:00 às 17:00.</p>
 							</div>
 						</div>
 						<div class="carousel-item">
 							<img src="https://www.markuptag.com/images/slider-img-3.jpg" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
-								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
+								<p>Horário de atendimento de segunda a sábado das 9:00 às 17:00.</p>
 							</div>
 						</div>
 					</div>
@@ -133,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<p>Estamos no mercado desde junho de 1989, há 33 anos no mercado lotérico. </p>
 							<p>Escolhemos estar aqui com você para trazer muita sorte e milhões em prêmios através da comodidade dos serviços pelo WhatsApp 
 								Venha conosco. É fácil, prático e seriedade acima de tudo. Alie sua sorte com a nossa e venha ganhar você também.  Vemmm....</p>
-							<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
+							<p>Horário de atendimento de segunda a sábado das 9:00 às 17:00.</p>
 						</div>
 					</article>
 				</div>
@@ -178,10 +179,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							$chavePix		= '64134331000105';
 							
 							if ($ev['value'][0] <> '' || $ev['value'][0] <> null) {
-								
+								//=========================== Início do bloco para excluir os arquivdo da pasta bolão ====================\\
 								eliminateFiles($caminho);
 								//============================= Fim do bloco para excluir os arquivdo da pasta bolão ====================\\
-								
 								for ($i=0; $i < count($ev['value']); $i++) { 
 
 									$numeroConsurso = $ev['value'][$i]['numero'];
@@ -240,7 +240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									<h5><i class="fa fa-calendar-check"></i> Data do sorteio: <?php echo $dataSorteio; ?></h5>
 									<h5><i class="fa fa-dollar-sign"></i> Estimativa de Prêmio: <?php echo $valorPrevisao; ?></h5>
 									<h5><i class="fa fa-file-lines"></i> Valor da Cota: <?php echo $valorCota; ?></h5>
-									<h5><i class="fa fa-file-lines"></i> Cotas Disponíveis: <?php echo $cotaDisponivel; ?></h5>
+									<h5><i class="fa fa-file-lines"></i> Cotas Disponíveis: <?php echo $cotaDisponivel.' - Sujeito a Disponibilidade'; ?></h5>
 								</div>
 								<!-- ====================== Fim do Título ====================== -->
 								
@@ -260,8 +260,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<!-- ===================== Início do Rodapé ====================== -->
 							<h4><?php echo  $nomeDescricao;?></h4>
 							<div class="botao">
-								<a class="btn" data-bs-toggle="modal" onclick="carregar(id)" id="<?php echo $texto; ?>" data-bs-target="#modalBolao">
-								<!--a class="btn" href="https://api.whatsapp.com/send?phone=<?php //echo $telefoneAtendimento; ?>&amp;text=<?php //echo $texto?>" target="_blank"-->
+								<!--a class="btn" data-bs-toggle="modal" onclick="carregar(id)" id="<?php //echo $texto; ?>" data-bs-target="#modalBolao"-->
+								<a class="btn" href="https://api.whatsapp.com/send?phone=<?php echo $telefoneAtendimento; ?>&amp;text=<?php echo $texto?>">
 									<span >
 										<span >
 											<i class="fab fa-whatsapp"></i> 
@@ -325,7 +325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<p>Estamos no mercado desde junho de 1989, há 33 anos no mercado lotérico. </p>
 							<p>Escolhemos estar aqui com você para trazer muita sorte e milhões em prêmios através da comodidade dos serviços pelo WhatsApp 
 								Venha conosco. É fácil, prático e seriedade acima de tudo. Alie sua sorte com a nossa e venha ganhar você também.  Vemmm....</p>
-							<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
+							<p>Horário de atendimento de segunda a sábado das 9:00 às 17:00.</p>
 						</div>
 					</article>
 				</div>
@@ -350,7 +350,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<?php require_once('partsIndex/footer.html'); ?>
 	<!-- Início do Modal -->
-	<div class="modal fade" id="modalBolao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+	<!--div class="modal fade" id="modalBolao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -363,25 +363,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<div class="modal-body">
 						<?php 
 
-							echo '<div id="modal_bolao"></div>';	
+							/*echo '<div id="modal_bolao"></div>';	
 							echo '<div id="modal_valorCota"></div>';	
 							echo '<div id="modal_cotaDisponivel"></div><hr>';	
 							
 							echo 'Efetuar a transferência do valor da cota para: <br>';	
 							echo 'Empresa: <strong>'.$razaoSocial.'</strong><br>'; 
-							echo 'Chave PIX CNPJ: <strong>'.$chavePix.'</strong>'; 
+							echo 'Chave PIX CNPJ: <strong>'.$chavePix.'</strong>'; */
 						?>
-						<input type="text" name="empresa" id="empresa" hidden value="<?php echo $razaoSocial; ?>" readonly>
-						<input type="text" name="chavepix" id="chavepix" hidden value="<?php echo $chavePix; ?>" readonly>
+						<input type="text" name="empresa" id="empresa" hidden value="<?php //echo $razaoSocial; ?>" readonly>
+						<input type="text" name="chavepix" id="chavepix" hidden value="<?php //echo $chavePix; ?>" readonly>
 						
-						<input type="text" name="phone" id="phone" hidden value="<?php echo $telefoneAtendimento; ?>" readonly>
+						<input type="text" name="phone" id="phone" hidden value="<?php //echo $telefoneAtendimento; ?>" readonly>
 						<input type="text" name="modal_text" id="modal_text" hidden readonly>
 
 						<input class="input-modal form-control" type="text"  id="nome" name="nome" placeholder="Nome completo" required>
 						<input class="input-modal form-control" type="text"  id="cpf" name="cpf" placeholder="CPF" required>
 						<input class="input-modal form-control" type="text"  id="telefone" name="telefone" placeholder="Telefone" required>
 						<input class="input-modal form-control" type="email" id="email" name="email" placeholder="E-mail" required>
-						<?php echo '<center><div class="aviso"><strong>Você será direcionado para um de nossos atendentes para finalizar a compra.</strong></div</center>'; ?>
+						<?php //echo '<center><div class="aviso"><strong>Você será direcionado para um de nossos atendentes para finalizar a compra.</strong></div</center>'; ?>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -397,7 +397,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</form>
 			</div>
 		</div>
-	</div>
+	</div-->
 	<!-- Fim do Modal -->
   <script src="./js/funcao.js"></script>
 </html>
