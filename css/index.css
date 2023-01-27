@@ -44,6 +44,25 @@ body{
 a{
     text-decoration: none;
 }
+/*========================== Modal ==============================*/
 .input-modal {
     margin: 5px 0;
 }
+.modal-content {
+    padding: 10px;
+    border-radius: 1em;
+    background-color: #54aa38;
+}
+.modal-header {
+    margin-bottom: 10px;
+    border-radius: 1em;
+    background-color: #ffffff;
+}
+form {
+    border-radius: 1em;
+    background-color: #ffffff;
+}
+.aviso {
+    background-color: #ebc681;
+}
+/*========================== Modal ==============================*/
