@@ -1,0 +1,50 @@
+/*  ============================ Início Animação do background do topo ============================*/
+body {
+    background: linear-gradient(45deg, #47ad2b, #1c4611,#bde6b2, #1c4611,#47ad2b);
+}
+header .navbar-custom,.card {
+    background: linear-gradient(-45deg, #47ad2b, #1c4611,#bde6b2, #1c4611,#47ad2b,#bde6b2,#47ad2b,#1c4611,#bde6b2,#1c4611,#47ad2b) no-repeat;
+}
+
+body,header .navbar-custom,.card{
+    animation: gradient 10s ease alternate infinite;
+    background-size: 300% 300%;
+}
+header#top-menu #top-bar-img{
+    animation: gradient 10s ease alternate infinite;
+}
+@keyframes gradient {
+	from {
+		background-position: 0 50%;
+	}
+	to {
+		background-position: 100% 50%;
+	}
+}
+
+header#top-menu #top-bar .logo img {
+    animation: fly 5s linear infinite alternate ;
+    animation-delay: 1s;
+}
+
+@keyframes fly {
+    0% {
+		transform: translate(0,10px) rotate(10deg) scale(1.1);
+	}
+}
+.conetudo a:hover,
+.conetudo a:focus {
+    animation: botao 1.75s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+.conetudo a:active {
+    transform: translateY(2px);
+    animation: none;
+}
+
+@keyframes botao {
+    to {
+        opacity: 2;
+		transform: scale(1.2,1.2);
+	}
+}
+/*  ============================ Fim Animação do background do topo ============================*/

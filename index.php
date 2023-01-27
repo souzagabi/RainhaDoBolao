@@ -18,30 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Rainha do Bolão</title>
-
-    
-
-	<link rel="icon" href="./img/RainhaBolao44x44.png">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-	
-
-	<link rel="stylesheet" href="./css/index.css">
-	<link rel="stylesheet" href="./css/card.css">
-	<link rel="stylesheet" id="jupiterx-child-css" href="./css/style.css" type="text/css" media="all" />
-
+    <?php require_once('partsIndex/header.html'); ?>
   </head>
   
   <body>
@@ -55,152 +32,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 	<!-- Incício da sessão do banner-->
-
     <section class="section-top-banner">
-
       <div class="top-banner">
-
-		<header id="top-menu">
-
-			<section id="top-bar" class="top-bar">
-				<section id="top-bar-img" class="top-bar-img">
-
-				<div class="row">
-
-					<figure>
-
-						<img src="./img/RainhaBolaoLogo.png" alt="Logotipo Rainha do Bolão"/>
-
-					</figure>
-
-				</div>
-
-				</section>
-			</section>
-
-		</header>
-
+		<?php require_once('partsIndex/top.html'); ?>
 		<div class="banner">
-
 			<!-- Banner Section -->
-
 			<section id="banner">
-
 				<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-
 					<ol class="carousel-indicators">
-
 						<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-
 						<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-
 						<li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-
 					</ol>
-
 					<div class="carousel-inner">
-
 						<div class="carousel-item active">
-
 							<img src="./img/BannerRainhaBolao.png" alt="FIXO" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
 								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
 							</div>
 						</div>
-
 						<div class="carousel-item">
-
 							<img src="https://www.markuptag.com/images/slider-img-2.jpg" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
-								<h3>Nesse momento  estamos dedicados somente Lotofacil Independência .</h3>
-								<h3>A PARTIR DO 12/09/22 TEREMOS TODAS AS MODALIDADES DE JOGOS EM FORMATO DE BOLÕES</h3>
 								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
 							</div>
 						</div>
-
 						<div class="carousel-item">
-
 							<img src="https://www.markuptag.com/images/slider-img-3.jpg" class="d-block w-100" alt="..." />
 							<div class="carousel-caption d-none d-md-block">
-								<h3>Nesse momento  estamos dedicados somente Lotofacil Independência .</h3>
-								<h3>A PARTIR DO 12/09/22 TEREMOS TODAS AS MODALIDADES DE JOGOS EM FORMATO DE BOLÕES</h3>
 								<p>Horário de atendimento de segunda a sábado das 9:00 às 19:00.</p>
 							</div>
 						</div>
-
 					</div>
-
 					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
 						<span class="visually-hidden">Previous</span>
-
 					</a>
-
 					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-
 						<span class="visually-hidden">Next</span>
-
 					</a>
-
 				</div>
-
 			</section>
-
 			<!-- End Banner Section -->
-
 			<section id="banner">
-
 				<div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-
 					<div class="swiper-button-prev"></div>
-
 					<div class="swiper-button-next"></div>
-
 					<div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-
 						<span class="swiper-pagination-bullet"></span><span
-
 							class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
-
 					</div>
-
 					<div class="swiper-wrapper" style="transform: translate3d(-2698px, 0px, 0px); transition-duration: 0ms;">
-
 						<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 1349px">
-
 							<figure>
-
 								<img src="./img/BannerRainhaBolao.png" alt="FIXO" style="width: 1349px" height="200" />
-
 							</figure>
-
 						</div>
-
 					</div>
-
 				</div>
-
 			</section>
-
 		</div>
-
       </div>
-
     </section>
-
 	<!-- Fim da sessão do banner-->
 	<!-- Início da sessão de conteúdo-->
 	<?php
 		require_once('php/funcao.php');
-        $url = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOConcurso?$expand=bolao/loteria&$filter=stAtivo%20eq%20true&$expand=imagem&$expand=bolao/imagem&$expand=bolao/loteria/imagem';
+        $url = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOConcurso?$expand=bolao/loteria&$filter=stAtivo%20eq%20true&$expand=imagem&$expand=bolao/imagem&$expand=bolao/loteria/imagem&$orderby=bolao/loteria/ordemlandingpage&$orderby=concursoEspecial%20desc';
 
-        $eventos = json_decode(file_get_contents($url));
-        $ev = converterStrClassParaArray($eventos);
-		
+		$eventos = json_decode(file_get_contents($url));
+		$ev = converterStrClassParaArray($eventos);
 		
 		$urlEmpresa = 'https://adjsistemas.dyndns.org:2001/adj/loteria/auth/DAOEmpresa';
 		
@@ -277,6 +179,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							
 							if ($ev['value'][0] <> '' || $ev['value'][0] <> null) {
 								
+								eliminateFiles($caminho);
+								//============================= Fim do bloco para excluir os arquivdo da pasta bolão ====================\\
+								
 								for ($i=0; $i < count($ev['value']); $i++) { 
 
 									$numeroConsurso = $ev['value'][$i]['numero'];
@@ -285,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									$qtdeCotas 		= $ev['value'][$i]['qtdeCotas'];
 									$nomeImagem		= $ev['value'][$i]['bolao']['bolaoId'];
 									$loteria		= $ev['value'][$i]['bolao']['loteria']['nomeDescricao'];
+									$nomeImgLoteria = tirarAcentos($loteria);
 									$valorCota		= number_format($ev['value'][$i]['bolao']['valorCota'],2,",",".");
 									$cotaDisponivel = $ev['value'][$i]['qtdeCotasLiberadas'];
 									$nomeDescricao	= $ev['value'][$i]['nomeDescricao'];
@@ -307,9 +213,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										if ($loteria == 'DIA DE SORTE') { $corFundo = '#cb852b';} 
 										if (($loteria == 'SUPER SETE') || ($loteria == 'SUPER-SETE')) { $corFundo = '#a8cf45';} 
 										
-										$bs64_evento = 'data:image/jpg;base64,'.$ev['value'][$i]['bolao']['imagem'];
+										$bs64_evento = 'data:image/jpg;base64,'.$ev['value'][$i]['imagem'];
+										$imgLoteria  = 'data:image/jpg;base64,'.$ev['value'][$i]['bolao']['loteria']['imagem'];
 		
+										if(!is_dir($caminho))
+											mkdir($caminho, 777);
+
 										$img = converter_base64_para_imagem($bs64_evento, $caminho, $nomeImagem);
+										$imgLot = converter_base64_para_imagem($imgLoteria, 'img/', $nomeImgLoteria);
+										
+										if ($i == 0) {
+											echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
+											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.jpg"></div>';
+										} else if ($loteria != $ev['value'][$i - 1]['bolao']['loteria']['nomeDescricao'] ) {
+											echo '</div>';
+											echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
+											echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.jpg"></div>';
+										}
 								
 						?>
 						<div class="column-geral col-sm-3" style="background-color: <?php echo $corFundo; ?>;">
@@ -340,8 +260,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<!-- ===================== Início do Rodapé ====================== -->
 							<h4><?php echo  $nomeDescricao;?></h4>
 							<div class="botao">
-								<!--a class="btn" data-bs-toggle="modal" onclick="carregar(id)" id="<?php //echo $texto; ?>" data-bs-target="#modalBolao"-->
-								<a class="btn" href="https://api.whatsapp.com/send?phone=<?php echo $telefoneAtendimento; ?>&amp;text=<?php echo $texto?>" target="_blank">
+								<a class="btn" data-bs-toggle="modal" onclick="carregar(id)" id="<?php echo $texto; ?>" data-bs-target="#modalBolao">
+								<!--a class="btn" href="https://api.whatsapp.com/send?phone=<?php //echo $telefoneAtendimento; ?>&amp;text=<?php //echo $texto?>" target="_blank"-->
 									<span >
 										<span >
 											<i class="fab fa-whatsapp"></i> 
@@ -353,6 +273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<!-- ===================== Fim do Rodapé ====================== -->
 						</div>
 						<?php 
+									} // verificação se tem cota disponível
 									$texto 			= '';
 									$numeroConsurso = '';
 									$dataSorteio 	= '';
@@ -363,7 +284,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 									$valorCota		= '';
 									$nomeDescricao	= '';
 									$corFundo		= '';
-									} // verificação se tem cota disponível
 
 								} // Fim do loop For da linha 212
 							} else {// Fim da verificação se o existe dados na consulta
@@ -428,139 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</section>
 	<!-- Fim da sessão de conteúdo-->
 
-	<section class="footer">
-
-		<!-- Footer -->
-
-		<footer class="text-center text-lg-start bg-light text-muted">
-
-			<!-- Section: Social media -->
-
-			<!--section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-
-				<div class="me-5 d-none d-lg-block">
-					<span>Entre em contato conosco em nossas redes sociais:</span>
-				</div>
-				<div>
-					<a href="" class="me-4 text-reset">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a href="" class="me-4 text-reset">
-						<i class="fab fa-twitter"></i>
-					</a>
-					<a href="" class="me-4 text-reset">
-						<i class="fab fa-google"></i>
-					</a>
-					<a href="" class="me-4 text-reset">
-
-						<i class="fab fa-instagram"></i>
-
-					</a>
-
-					<a href="" class="me-4 text-reset">
-
-						<i class="fab fa-linkedin"></i>
-
-					</a>
-
-					<a href="" class="me-4 text-reset">
-
-						<i class="fab fa-github"></i>
-
-					</a>
-
-				</div>
-
-			</section-->
-
-			<!-- Section: Social media -->
-
-			<!-- Section: Links  -->
-			<hr>
-			<section class="links">
-
-				<div class="container text-center text-md-start mt-5">
-
-					<!-- Grid row -->
-
-					<div class="row mt-3">
-
-						<!-- Grid column -->
-
-						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-							<!-- Content -->
-							<h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i>LORD LOTÉRICO</h6>
-							<!--p>Here you can use rows and columns to organize your footer content. Lorem ipsum
-								dolor sit amet, consectetur adipisicing elit.</p-->
-						</div>
-
-						<!-- Grid column -->
-
-		
-
-						<!-- Grid column -->
-
-						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-							<!-- Links -->
-							<h6 class="text-uppercase fw-bold mb-4">Produtos</h6>
-							<!--p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">MEGA-SENA</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">QUINA</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">LOTOFÁCIL</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">LOTOMANIA</a></p-->
-						</div>
-						<!-- Grid column -->
-						<!-- Grid column -->
-						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-							<!-- Links -->
-							<h6 class="text-uppercase fw-bold mb-4">Links Úteis</h6>
-							<!--p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">Preço</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">Configuração</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">Ordens</a></p>
-							<p><a href="#!" class="form-control btn-outline-secondary" style="pointer-events: none">Ajuda</a></p-->
-						</div>
-						<!-- Grid column -->
-						<!-- Grid column -->
-						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-							<!-- Links -->
-
-							<h6 class="text-uppercase fw-bold mb-4">Contato</h6>
-
-							<p><i class="fas fa-home me-3"></i> Loja 1 - Rua das Roseiras 233</p>
-							<p><i class="fas fa-home me-3"></i> Loja 2 - Rua Bandeirantes 430</p>
-
-							<!--p><i class="fas fa-envelope me-3"></i>info@example.com</p-->
-
-							<p><i class="fas fa-phone me-3"></i> (14) 99687-0691</p>
-
-							<!--p><i class="fas fa-print me-3"></i> (14) xxxx-xxxx</p-->
-
-						</div>
-						<!-- Grid column -->
-					</div>
-					<!-- Grid row -->
-				</div>
-			</section>
-			<!-- Section: Links  -->
-			<!-- Copyright -->
-			<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-
-				<p> &copy; 2008 - ADJ-Sistemas - (14) 3401-2243.
-
-					<!--a class="text-reset fw-bold" href="https://adjsistemas.com.br/">adjsistemas.com.br</a-->
-
-				</p>
-
-			</div>
-
-			<!-- Copyright -->
-
-		</footer>
-
-		<!-- Footer -->
-
-	</section>
+	<?php require_once('partsIndex/footer.html'); ?>
 	<!-- Início do Modal -->
 	<div class="modal fade" id="modalBolao" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
