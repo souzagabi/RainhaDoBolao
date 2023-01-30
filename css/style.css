@@ -101,12 +101,19 @@ footer #redesSociais i {
     font-size: 18px;
 }
 /*============================== Footer ===================================*/
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-device-width: 980px) {
     #banner_geral,.bannermsg,
     .navbar-light .navbar-nav .divisoria,
     .redeSociais {
         display: none;
     }
+        
+    #banner_mobile{
+        margin-top: 25%;
+        display: block;
+    }
+}
+@media only screen and (max-device-width: 700px) {
     .navbar-light .navbar-toggler {
         color: rgba(204, 204, 204, 0.55);
         border-color: rgba(255, 255, 255, 0.658);
@@ -124,11 +131,7 @@ footer #redesSociais i {
         margin-top: 10px;
         margin-left: 0px;
     }
-    
-    #banner_mobile{
-        margin-top: 25%;
-        display: block;
-    }
+
     #banner_geral #carousel-inner img{
         height: 800px;
     }

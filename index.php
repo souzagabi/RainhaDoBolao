@@ -125,7 +125,7 @@
 								$razaoSocial	= 'Falcao Filgueiras Ltda ME';
 								$chavePix		= '64134331000105';
 								
-								if ($ev['value'][0] <> '' || $ev['value'][0] <> null) {
+								if ($ev['value'] && ($ev['value'][0] <> '' || $ev['value'][0] <> null)) {
 									//=========================== Início do bloco para excluir os arquivdo da pasta bolão ====================\\
 									eliminateFiles($caminho);
 									//============================= Fim do bloco para excluir os arquivdo da pasta bolão ====================\\
