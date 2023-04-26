@@ -20,6 +20,7 @@
 
     // Função para converter base64 em imagem
     function converter_base64_para_imagem( $codigo_base64, $caminho, $nome_imagem = null ) {
+        
         if ( !empty($codigo_base64) && !empty($caminho) ) :
             if(!is_dir($caminho)){
                 mkdir($caminho, 777);

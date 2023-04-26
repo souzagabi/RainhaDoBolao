@@ -165,69 +165,75 @@
 											$bs64_evento = 'data:image/jpg;base64,'.$ev['value'][$i]['imagem'];
 											$imgLoteria  = 'data:image/png;base64,'.$ev['value'][$i]['bolao']['loteria']['imagem'];
 
-											if(!is_dir($caminho)){
-												mkdir($caminho, 777);
-											}
-
 											$img = converter_base64_para_imagem($bs64_evento, $caminho, $nomeImagem);
 											$imgLot = converter_base64_para_imagem($imgLoteria, 'img/', $nomeImgLoteria);
 											
 											if ($i == 0) {
 												echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
 												echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.png"></div>';
-											} else if ($loteria != $ev['value'][$i - 1]['bolao']['loteria']['nomeDescricao'] ) {
-												echo '</div>';
+											} else if ($loteria != $ev['value'][$i - 1]['bolao']['loteria']['nomeDescricao']) {
+												echo '</div><!-- Fim do Cartão Normal-->';
 												echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
 												echo '<div class="imgLoteria"><img alt="" class="imgLot" src="./img/'.$nomeImgLoteria.'.png"></div>';
-											}
+											} 
 											if ($promocao == 'TRUE'){
+												$caminhoPromocao = 'img/promocao/';
 												$bolaoPromocao  = 'data:image/jpg;base64,'.$ev['value'][$i]['bolao']['imagem'];
-												converter_base64_para_imagem($bolaoPromocao, 'img/', $nomeImagem);
-
-												echo '<div class="col-sm-6 promocao"><img width="100%" style="margin-top: 35%;" src="./img/promocao/'.$nomeImagem.'.jpg"></div>';
+												converter_base64_para_imagem($bolaoPromocao, $caminhoPromocao, $nomeImagem);
+												echo '<div class="row loteria" style="background-color: '.$corFundo.'">';
+												echo '<div class="col-sm-6 promocao"><img width="100%" src="./img/promocao/'.$nomeImagem.'.jpg"></div>';
 											}
 							?>
 							
-							<div class="column-geral col-sm-3" style="background-color: <?php echo $corFundo; ?>;">
-								<div class="row title">
-									<!-- ====================== Início do Título ====================== -->
-									<div class="column">
-										<h5><i class="fa fa-search-location"></i> Concurso Nº: <?php echo $numeroConsurso; ?></h5>
-										<h5><i class="fa fa-calendar-check"></i> Data do sorteio: <?php echo $dataSorteio; ?></h5>
-										<h5><i class="fa fa-dollar-sign"></i> Estimativa de Prêmio: <?php echo $valorPrevisao; ?></h5>
-										<h5><i class="fa fa-file-lines"></i> Valor da Cota: <?php echo $valorCota; ?></h5>
-										<h5><i class="fa fa-file-lines"></i> Cotas Disponíveis: <?php echo $cotaDisponivel.' - Sujeito a Disponibilidade'; ?></h5>
-									</div>
-									<!-- ====================== Fim do Título ====================== -->
-									
-								</div>
-								<!-- ===================== Início do Conteúdo ====================== -->
-								<div class="card0">
-									
-									<div class="card text-center">
-										<div class="card-body">
-											<img alt="" class="card-img-top mediaCard" src="./img/bolao/<?php echo $nomeImagem.'.jpg'; ?>">
-										</div>
-									</div>
-									
-								</div>
-								<!-- ===================== Fim do Conteúdo ====================== -->
+											<div class="column-geral col-sm-3" style="background-color: <?php echo $corFundo; ?>;">
+												<div class="row title">
+													<!-- ====================== Início do Título ====================== -->
+													<div class="column">
+														<h5><i class="fa fa-search-location"></i> Concurso Nº: <?php echo $numeroConsurso; ?></h5>
+														<h5><i class="fa fa-calendar-check"></i> Data do sorteio: <?php echo $dataSorteio; ?></h5>
+														<h5><i class="fa fa-dollar-sign"></i> Estimativa de Prêmio: <?php echo $valorPrevisao; ?></h5>
+														<h5><i class="fa fa-file-lines"></i> Valor da Cota: <?php echo $valorCota; ?></h5>
+														<h5><i class="fa fa-file-lines"></i> Cotas Disponíveis: <?php echo $cotaDisponivel.' - Sujeito a Disponibilidade'; ?></h5>
+													</div>
+													<!-- ====================== Fim do Título ====================== -->
+													
+												</div>
+												<!-- ===================== Início do Conteúdo ====================== -->
+												<div class="card0">
+													<?php
+													if ($promocao == 'TRUE'){
+														echo '<div class="lotPromocao">';
+														echo '<img src="./img/promocao/duplaPascoa.png" alt="Imagem de Promoção">';
+														echo '</div>';
+													}
+													?>
+													<div class="card text-center">
+														<div class="card-body">
+															<img alt="" class="card-img-top mediaCard" src="./img/bolao/<?php echo $nomeImagem.'.jpg'; ?>">
+														</div>
+													</div>
+													
+												</div>
+												<!-- ===================== Fim do Conteúdo ====================== -->
 
-								<!-- ===================== Início do Rodapé ====================== -->
-								<h4><?php echo  $nomeDescricao;?></h4>
-								<div class="botao">
-									<a class="btn" href="https://api.whatsapp.com/send?phone=<?php echo $telefoneAtendimento; ?>&amp;text=<?php echo $texto?>">
-										<span >
-											<span >
-												<i class="fab fa-whatsapp"></i> 
-											</span>
-											<span > COMPRAR </span>
-										</span>
-									</a>
-								</div>
-								<!-- ===================== Fim do Rodapé ====================== -->
-							</div>
+												<!-- ===================== Início do Rodapé ====================== -->
+												<h4><?php echo  $nomeDescricao;?></h4>
+												<div class="botao">
+													<a class="btn" href="https://api.whatsapp.com/send?phone=<?php echo $telefoneAtendimento; ?>&amp;text=<?php echo $texto?>">
+														<span >
+															<span >
+																<i class="fab fa-whatsapp"></i> 
+															</span>
+															<span > COMPRAR </span>
+														</span>
+													</a>
+												</div>
+												<!-- ===================== Fim do Rodapé ====================== -->
+											</div>
 							<?php 
+											if ($promocao == 'TRUE'){
+												echo '</div><!-- Fim do Cartão Promoção-->';
+											}
 										} // verificação se tem cota disponível
 										$texto 			= '';
 										$numeroConsurso = '';
@@ -240,7 +246,9 @@
 										$nomeDescricao	= '';
 										$corFundo		= '';
 
-									} // Fim do loop For da linha 212
+										
+												
+									} // Fim do loop For da linha 133
 								} else {// Fim da verificação se o existe dados na consulta
 									?>
 									<div class="botao">
@@ -258,10 +266,10 @@
 							
 								}// Fim do else
 							?>
-						</div>
+						</div> <!-- Fim da Div Text-Center-->
 					</section>
-				</div>
-			</div>
+				</div><!-- Fim da Div Cards-->
+			</div><!-- Fim da Div Games-->
 			<div class="historia-footer"><div id="sobrenos"></div></div>
 			<section class="historia-footer">
 				<div class="row">

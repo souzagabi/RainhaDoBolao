@@ -34,6 +34,10 @@ body{
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+.promocao img{
+    margin-top: 15%;
+    border-radius: 15px;
+}
 .loteria{
     margin: 10px 0px;
     padding: 10px;
